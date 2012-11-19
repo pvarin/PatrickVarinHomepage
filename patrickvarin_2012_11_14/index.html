@@ -5,7 +5,9 @@
 <meta name="description" content="Patrick Varin's homepage, portfolio and resume" />
 <link rel="stylesheet" type="text/css" href="styles/main.css" />
 <title>Patrick Varin - Homepage</title>
-<script src="scripts/main.js" type="text/javascript"></script>
+<script src="scripts/navigation.js" type="text/javascript"></script>
+<script src="scripts/gridItemOverlay.js" type="text/javascript"></script>
+<script src="scripts/format.js" type="text/javascript"></script>
 <script type="text/javascript">
 	var _gaq = _gaq || [];
 	_gaq.push(['_setAccount', 'UA-28050963-1']);
@@ -18,7 +20,7 @@
 	})();
 </script>
 </head>
-<body>
+<body onload="format()">
 	<div id="wrapper">
 		<div id="header">
 			<ul id="navbar">
@@ -65,19 +67,42 @@
 			<div id="grid" class="content-wrapper-hidden">
 				<div id="projects" class="content-grid-wrapper-visible">
 					<div>
+						<div class="grid-item-overlay-hidden">
+							<h3>Task Master</h3>
+							<p>Design for a social, geo-aware, task managing application</p>
+						</div>
 						<img src="assets/TaskMaster_thumb.png"/>
 					</div>
 					<div>
+						<div class="grid-item-overlay-hidden">
+							<h3>Artificial Intelligence</h3>
+							<p>Teaching and training Pac-Man to win his own game.</p>
+						</div>
 						<img src="assets/Pacman_thumb.png"/>
 					</div>
 					<div>
+						<div class="grid-item-overlay-hidden">
+							<h3>Dynamical Systems</h3>
+							<p>Four projects studying different systems in non-linear dynamics and chaos.</p>
+						</div>
 						<img src="assets/Chaos_thumb.png"/>
 					</div>
 					<div>
+						<div class="grid-item-overlay-hidden">
+							<h3>Wave Simulation</h3>
+							<p>A study and simulation of the Shallow Water Equations</p>
+						</div>
 						<img src="assets/Waterwave_thumb.png"/>
 					</div>
 					<div>
+						<div class="grid-item-overlay-hidden">
+							<h3>R-P-S Hand</h3>
+							<p>A mechanical hand that plays Rock-Paper-Scissors and learns to beat you</p>
+						</div>
 						<img src="assets/RPSHand_thumb.png"/>
+					</div>
+					<div>
+						U-PHYSICS COMP
 					</div>
 					<div>
 						STAT MECH
@@ -102,8 +127,6 @@
 					</div>
 					<div>
 						DESIGN NATURE
-					</div>
-					<div>
 					</div>
 					<div>
 					</div>

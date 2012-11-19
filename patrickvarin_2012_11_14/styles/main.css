@@ -84,7 +84,7 @@ min-height:inherit;
 }
 
 .content-wrapper-hidden *{
-	visibility:hidden;
+	visibility:hidden!important;
 	padding:0!important;
 	margin:0!important;
 	height:0!important;
@@ -94,6 +94,7 @@ min-height:inherit;
 /*Grid Page*/
 /*Content Grid*/
 .content-grid-wrapper-visible{
+	position:absolute;
 	visibility:visible;
 	margin-left:3%;
 	margin-right:5%;
@@ -111,6 +112,33 @@ min-height:inherit;
 	margin-bottom:2.5%;
 	background:white;
 	float:left;
+}
+
+.grid-item-overlay-visible{
+	position:absolute;
+	width:inherit;
+	height:inherit;
+	color:white;
+	/*compatibility for browsers that don't support alpha*/
+	background:#202020;
+	background:rgba(32,32,32,.8);
+	font: normal normal normal 13px/1.4em Helvetica, Arial, sans-serif;
+}
+
+.grid-item-overlay-visible > h3{
+	padding-top:0;
+	margin-top:0;
+	text-align:center;
+}
+.grid-item-overlay-visible > p{
+	padding-left:5%;
+	color:#D0D0D0;
+}
+.grid-item-overlay-hidden *{
+	visibility:hidden;
+	height:0;
+	padding:0;
+	margin:0;
 }
 
 .content-grid-wrapper-visible>div img{
