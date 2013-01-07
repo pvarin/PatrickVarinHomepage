@@ -33,7 +33,7 @@ html, body {
 	margin-left: 10px;
 	margin-right: 10px;
 	float:left;
-	background-color:#101010;
+	background-color:#181818;
 	color: white;
 	
 	text-align: center;
@@ -45,9 +45,10 @@ html, body {
 
 /*Content and Title*/
 #main-wrapper{
-margin-bottom:5%;
-height:80%;
-min-height:inherit;
+	margin-bottom:5%;
+	height:80%;
+	min-height:inherit;
+	background-color:#F0F0F0;
 }
 /*Title*/
 #title-wrapper{
@@ -73,7 +74,7 @@ min-height:inherit;
 /*end Title*/
 
 /*Content-General*/
-.content-wrapper-visible{
+.content-wrapper{
 	position:relative;
 	top:0;
 	width:70%;
@@ -81,13 +82,6 @@ min-height:inherit;
 	min-height:inherit;
 	float:right;
 	background-color:#F0F0F0;
-}
-
-.content-wrapper-hidden *{
-	visibility:hidden!important;
-	padding:0!important;
-	margin:0!important;
-	height:0!important;
 }
 /*end Content-General*/
 
@@ -198,18 +192,32 @@ min-height:inherit;
 	padding-left:3%;
 	padding-right:5%;
 	padding-top:5%;
-	height:85%;
+	padding-bottom:5%;
+	height:90%;
 	width:92%;
 }
 
 #headshot{
-	float:right;
+	float:left;
 }
 
 #headshot img{
 	max-height:100%;
 	max-width:100%;
-	padding-left: 10px;
+	padding-right: 20px;
+}
+
+#content-about-wrapper span{
+	position:relative;
+	top:1em;
+	font: normal normal normal 16px/1.4em Helvetica, Arial, sans-serif;
+}
+
+#content-about-wrapper p{
+	font: normal normal normal 13px/1.4em Helvetica, Arial, sans-serif;
+	text-align:justify;
+	margin:2em;
+	margin-right:0;
 }
 /*end About Page*/
 
@@ -240,6 +248,9 @@ width:100%;
 	width:10%!important;
 	padding:0!important;
 	color:white;
+}
+.placeholder{
+	color: #aaa;
 }
 /*end Contact Form*/
 /*Contact Info*/

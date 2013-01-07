@@ -1,24 +1,16 @@
 /*Navigation Functions*/
+currentPage = 'home'
 function goToPage(page){
 	//hide all
-	document.getElementById('home').setAttribute("class","content-wrapper-hidden");
-	document.getElementById('about').setAttribute("class","content-wrapper-hidden");
-	document.getElementById('grid').setAttribute("class","content-wrapper-hidden");
-	document.getElementById('resume').setAttribute("class","content-wrapper-hidden");
-	document.getElementById('contact').setAttribute("class","content-wrapper-hidden");
+	$('#'+currentPage).fadeOut(function(){
+	$('#'+page).fadeIn();});
+	//show content
+	currentPage = page;
 
 	//remove navbar formatting
-	document.getElementById('home-button').setAttribute("class","");
-	document.getElementById('about-button').setAttribute("class","");
-	document.getElementById('grid-button').setAttribute("class","");
-	document.getElementById('resume-button').setAttribute("class","");
-	document.getElementById('contact-button').setAttribute("class","");
-	
-	//show content
-	document.getElementById(page).setAttribute("class","content-wrapper-visible");
-	
+	$('#navbar li').not($('#'+page+'-button')).toggleClass('current-tab',false);
 	//format navbar
-	document.getElementById(page+'-button').setAttribute("class","current-tab");
+	$('#'+page+'-button').toggleClass('current-tab',true);
 }
 
 function goToGrid(grid){
@@ -38,3 +30,7 @@ function goToGrid(grid){
 	//format navbar
 	document.getElementById(grid+'-button').setAttribute('class','current-grid')
 }
+
+$(document).ready(function(){
+	$('.content-wrapper').not($('#home')).hide();
+});
